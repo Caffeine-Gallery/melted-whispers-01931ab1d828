@@ -1,0 +1,12 @@
+type Time = int;
+service : {
+  getLocation: (text) -> (opt text) query;
+  getMenu: () -> (vec record {
+                        text;
+                        text;
+                        nat;
+                      }) query;
+  getRemainingDays: () -> (int) query;
+  isOperating: () -> (bool) query;
+  makeReservation: (text, text, nat, Time) -> (opt text);
+}
